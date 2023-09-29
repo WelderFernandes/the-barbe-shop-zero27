@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "intl": "^1.2.5",
     "next": "latest",
     "react": "latest",
+    "react-calendar": "^4.6.0",
     "react-dom": "latest",
     "react-icons": "^4.11.0"
   },
