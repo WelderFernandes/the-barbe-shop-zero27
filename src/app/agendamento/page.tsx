@@ -68,7 +68,7 @@ export default function Agendamento() {
                                 </button>
                             </div>
                         </div>
-                        <div className="mt-5 pb-[200px] overflow-y-scroll overflow-visible scroll-hidden h-[440px]">
+                        <div className="mt-5 overflow-y-scroll overflow-visible scroll-hidden h-[440px]">
                             <Servicos setCheckCount={setCheckCount}/>
                             <Servicos setCheckCount={setCheckCount}/>
                             <Servicos setCheckCount={setCheckCount}/>
