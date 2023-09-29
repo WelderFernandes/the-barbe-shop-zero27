@@ -90,7 +90,7 @@ export default function Agendamento() {
                             <h2 className="text-xs">Produtos<br/> Selecionados</h2>
                         </div>
                     </div>
-                    <Link href={'/agendamento/selecionar-horarios'} className="btn btn-active btn-neutral text-white">Próximo</Link>
+                    <Link href={'/agendamento/selecionar-horarios'} className={checkCount == 0 ? 'btn btn-active btn-neutral text-white btn-disabled' : 'btn btn-active btn-neutral text-white'}>Próximo</Link>
                 </div>
             </footer>
         </div>
