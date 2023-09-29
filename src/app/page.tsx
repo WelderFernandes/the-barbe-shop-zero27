@@ -8,22 +8,9 @@ import Servicos from './components/servicos'
 
 export default function Home() {
   return (
-    <section className="m-auto h-auto min-h-screen min-w-[410px] max-w-[425px] overflow-hidden bg-[#F1F1F1]">
+    <section className="m-auto h-auto min-h-screen w-full max-w-[425px] bg-[#F1F1F1]">
       <header className="h-[186px] w-full bg-[url('/img/banner/banner.png')] bg-cover bg-no-repeat">
         <div className="flex w-full justify-end p-5 text-3xl text-white">
-import Image from "next/image";
-import Link from "next/link";
-import { BiMap } from "react-icons/bi";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
-import { IoNotificationsSharp } from "react-icons/io5";
-import Rodape from "./components/rodape";
-import ServicosHome from "./components/servicos_home";
-
-export default function Home() {
-  return (
-    <section className="min-h-screen h-auto m-auto w-full max-w-[425px] bg-[#F1F1F1]">
-      <header className="bg-[url('/img/banner/banner.png')] w-full h-[186px] bg-no-repeat bg-cover">
-        <div className="text-3xl text-white flex w-full justify-end p-5">
           <IoNotificationsSharp />
         </div>
         <div className="mt-6 flex flex-col items-center justify-center">
@@ -57,7 +44,6 @@ export default function Home() {
             <Servicos />
             <Servicos />
             <Servicos />
-
           </div>
           <div>
             <h1 className="mt-10 text-lg font-bold text-black">REDES SOCIAIS</h1>
