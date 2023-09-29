@@ -17,7 +17,9 @@ export default function Agendamento() {
               <AiOutlineArrowLeft />
             </Link>
           </div>
-          <h1 className="w-full text-center text-lg font-bold text-black">Selecionar Data</h1>
+          <h1 className="w-full text-center text-lg font-bold text-black">
+            Selecionar Data
+          </h1>
         </header>
 
         <main>

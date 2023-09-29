@@ -14,7 +14,12 @@ export default function Home() {
           <IoNotificationsSharp />
         </div>
         <div className="mt-6 flex flex-col items-center justify-center">
-          <Image src={'/img/logo/logo.png'} alt="Logo" width={150} height={150} />
+          <Image
+            src={'/img/logo/logo.png'}
+            alt="Logo"
+            width={150}
+            height={150}
+          />
           <h1 className="mt-3 text-xl font-bold text-black">Tam Cortes</h1>
         </div>
       </header>
@@ -30,15 +35,18 @@ export default function Home() {
           <div>
             <h1 className="mt-10 text-lg font-bold text-black">DESCRIÇÃO</h1>
             <p className="mt-4 text-xs text-black">
-              Nossa barbearia é o lugar onde a arte do corte de cabelo se encontra com um
-              atendimento de excelência. Com um ambiente acolhedor e descontraído, oferecemos
-              serviços personalizados, desde cortes clássicos até estilos modernos e tendências.
-              Venha nos visitar e descubra o que é ter um visual impecável com um toque de
-              sofisticação.
+              Nossa barbearia é o lugar onde a arte do corte de cabelo se
+              encontra com um atendimento de excelência. Com um ambiente
+              acolhedor e descontraído, oferecemos serviços personalizados,
+              desde cortes clássicos até estilos modernos e tendências. Venha
+              nos visitar e descubra o que é ter um visual impecável com um
+              toque de sofisticação.
             </p>
           </div>
           <div>
-            <h1 className="mb-5 mt-10 text-lg font-bold text-black">TOP 5 SERVIÇOS</h1>
+            <h1 className="mb-5 mt-10 text-lg font-bold text-black">
+              TOP 5 SERVIÇOS
+            </h1>
             <Servicos />
             <Servicos />
             <Servicos />
@@ -46,7 +54,9 @@ export default function Home() {
             <Servicos />
           </div>
           <div>
-            <h1 className="mt-10 text-lg font-bold text-black">REDES SOCIAIS</h1>
+            <h1 className="mt-10 text-lg font-bold text-black">
+              REDES SOCIAIS
+            </h1>
             <p className="mt-4 flex gap-4 text-2xl text-black">
               <a href="https://www.instagram.com.br/">
                 <BsInstagram />

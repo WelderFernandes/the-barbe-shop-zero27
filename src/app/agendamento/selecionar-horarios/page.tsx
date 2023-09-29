@@ -21,7 +21,9 @@ export default function SelecionarHorarios() {
               <AiOutlineArrowLeft />
             </Link>
           </div>
-          <h1 className="w-full text-center text-lg font-bold text-black">Selecionar Serviço</h1>
+          <h1 className="w-full text-center text-lg font-bold text-black">
+            Selecionar Serviço
+          </h1>
         </header>
 
         <main>

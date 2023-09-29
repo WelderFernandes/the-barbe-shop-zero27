@@ -1,4 +1,9 @@
-import { AiOutlineCalendar, AiOutlineHeart, AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
+import {
+  AiOutlineCalendar,
+  AiOutlineHeart,
+  AiOutlineHome,
+  AiOutlineUser,
+} from 'react-icons/ai'
 
 export default function Rodape() {
   return (
