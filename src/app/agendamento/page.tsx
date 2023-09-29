@@ -21,7 +21,7 @@ export default function Agendamento() {
                 
                 <main>
                     <div>
-                        <ul className="steps w-full mt-8">
+                        <ul className="steps w-full mt-5">
                             <li className="step step-primary"></li>
                             <li className="step"></li>
                             <li className="step"></li>
@@ -59,7 +59,7 @@ export default function Agendamento() {
                     </div>
 
                     <div>
-                        <h1 className="text-black text-lg font-bold mt-8">Serviços</h1>
+                        <h1 className="text-black text-lg font-bold mt-5">Serviços</h1>
                         <div className="form-control w-full mt-5">
                             <div className="input-group w-full">
                                 <input type="text" placeholder="Procurar" className="input input-bordered bg-white text-black w-full" />
