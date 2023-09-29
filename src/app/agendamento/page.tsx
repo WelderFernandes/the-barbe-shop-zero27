@@ -10,7 +10,7 @@ export default function Agendamento() {
     const [checkCount, setCheckCount] = useState(0);
 
     return (
-        <div className="">
+        <div className="overflow-hidden">
             <section className="mx-5">
                 <header className="flex justify-center items-center pt-5 text-3xl text-black w-full">
                     <h1 className="text-black text-lg font-bold w-full text-center">Selecionar Serviço</h1>
