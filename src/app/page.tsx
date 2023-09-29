@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { IoNotificationsSharp } from "react-icons/io5";
-import { BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
-import { BiMap } from "react-icons/bi";
-import Servicos from "./components/servicos";
-import Rodape from "./components/rodape";
 import Link from "next/link";
+import { BiMap } from "react-icons/bi";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+import { IoNotificationsSharp } from "react-icons/io5";
+import Rodape from "./components/rodape";
+import ServicosHome from "./components/servicos_home";
 
 export default function Home() {
   return (
-    <>
+    <section className="min-h-screen h-auto m-auto w-full max-w-[425px] bg-[#F1F1F1]">
       <header className="bg-[url('/img/banner/banner.png')] w-full h-[186px] bg-no-repeat bg-cover">
         <div className="text-3xl text-white flex w-full justify-end p-5">
           <IoNotificationsSharp />
@@ -33,11 +33,11 @@ export default function Home() {
           </div>
           <div>
               <h1 className="text-black text-lg font-bold mt-10 mb-5">TOP 5 SERVIÇOS</h1>
-              <Servicos/>
-              <Servicos/>
-              <Servicos/>
-              <Servicos/>
-              <Servicos/>
+              <ServicosHome/>
+              <ServicosHome/>
+              <ServicosHome/>
+              <ServicosHome/>
+              <ServicosHome/>
           </div>
           <div>
               <h1 className="text-black text-lg font-bold mt-10">REDES SOCIAIS</h1>
@@ -61,6 +61,6 @@ export default function Home() {
       <footer>
         <Rodape/>
       </footer>
-    </>
+    </section>
   )
 }
