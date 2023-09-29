@@ -1,5 +1,3 @@
-"use client"
-
 
 export default function Servicos({setCheckCount}: any) {
     
@@ -23,3 +21,4 @@ export default function Servicos({setCheckCount}: any) {
         </>
     );
 }
+
