@@ -27,10 +27,12 @@ const config: Config = {
           success: '#22c55e',
           warning: '#f8a116',
           error: '#dc2626',
+
         },
       },
     ],
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
+
 }
 export default config
