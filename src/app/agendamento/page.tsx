@@ -102,19 +102,33 @@ export default function Agendamento() {
         </main>
       </section>
 
-
-            <footer>
-                <div className="tabs tabs-boxed flex justify-between items-center fixed bottom-0 w-full max-w-[425px] h-[80px] bg-white shadow-md rounded-t-2xl p-5">
-                    <div>
-                        <div className="flex flex-row items-center gap-3">
-                            <p><span className="bg-primary text-secondary p-2 rounded-full text-xs">{checkCount}</span></p>
-                            <h2 className="text-xs">Produtos<br/> Selecionados</h2>
-                        </div>
-                    </div>
-                    <Link href={'/agendamento/selecionar-horarios'} className={checkCount == 0 ? 'btn btn-active btn-neutral text-white btn-disabled' : 'btn btn-active btn-neutral text-white'}>Próximo</Link>
-                </div>
-            </footer>
+      <footer>
+        <div className="tabs-boxed tabs fixed bottom-0 flex h-[80px] w-full max-w-[425px] items-center justify-between rounded-t-2xl bg-white p-5 shadow-md">
+          <div>
+            <div className="flex flex-row items-center gap-3">
+              <p>
+                <span className="rounded-full bg-primary p-2 text-xs text-secondary">
+                  {checkCount}
+                </span>
+              </p>
+              <h2 className="text-xs">
+                Produtos
+                <br /> Selecionados
+              </h2>
+            </div>
+          </div>
+          <Link
+            href={'/agendamento/selecionar-horarios'}
+            className={
+              checkCount === 0
+                ? 'btn btn-disabled btn-neutral btn-active text-white'
+                : 'btn btn-neutral btn-active text-white'
+            }
+          >
+            Próximo
+          </Link>
         </div>
-    );
-
+      </footer>
+    </div>
+  )
 }
