@@ -10,7 +10,7 @@ export default function Agendamento() {
     const [checkCount, setCheckCount] = useState(0);
 
     return (
-        <div className="overflow-hidden">
+        <div className="min-h-screen max-h-screen h-auto overflow-hidden">
             <section className="mx-5">
                 <header className="flex justify-center items-center pt-5 text-3xl text-black w-full">
                     <h1 className="text-black text-lg font-bold w-full text-center">Selecionar Serviço</h1>
@@ -68,7 +68,7 @@ export default function Agendamento() {
                                 </button>
                             </div>
                         </div>
-                        <div className="mt-5 overflow-y-scroll overflow-visible scroll-hidden h-[440px]">
+                        <div className="mt-5 pb-[310px] overflow-y-scroll overflow-visible scroll-hidden h-[440px]">
                             <Servicos setCheckCount={setCheckCount}/>
                             <Servicos setCheckCount={setCheckCount}/>
                             <Servicos setCheckCount={setCheckCount}/>
