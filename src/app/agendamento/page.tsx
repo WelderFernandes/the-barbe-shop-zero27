@@ -119,7 +119,11 @@ export default function Agendamento() {
           </div>
           <Link
             href={'/agendamento/selecionar-horarios'}
-            className="btn btn-neutral btn-active text-white"
+            className={
+              checkCount === 0
+                ? 'btn btn-disabled btn-neutral btn-active text-white'
+                : 'btn btn-neutral btn-active text-white'
+            }
           >
             Próximo
           </Link>
