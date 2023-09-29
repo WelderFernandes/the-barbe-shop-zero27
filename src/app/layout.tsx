@@ -1,6 +1,6 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <section className="min-h-screen h-auto m-auto max-w-[425px] min-w-[410px] bg-[#F1F1F1] overflow-hidden">
-          {children}
-        </section>
+        {children}
       </body>
     </html>
   )
