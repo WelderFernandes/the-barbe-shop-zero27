@@ -46,7 +46,7 @@ export default function Agendamento() {
 "use client"
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import Categoria from "../components/categoria";
 import Servicos from "../components/servicos";
 
@@ -58,10 +58,10 @@ export default function Agendamento() {
         <div className="overflow-hidden">
             <section className="mx-5">
                 <header className="flex justify-center items-center pt-5 text-3xl text-black w-full">
-                    <h1 className="text-black text-lg font-bold w-full text-center">Selecionar Serviço</h1>
                     <div className="flex justify-end">
-                        <Link href={'/'}><AiOutlineClose/></Link>
+                        <Link href={'/'}><AiOutlineArrowLeft/></Link>
                     </div>
+                    <h1 className="text-black text-lg font-bold w-full text-center">Selecionar Data</h1>
                 </header>
                 
                 <main>
@@ -135,7 +135,7 @@ export default function Agendamento() {
                             <h2 className="text-xs">Produtos<br/> Selecionados</h2>
                         </div>
                     </div>
-                    <button className="btn btn-active btn-neutral text-white">Próximo</button>
+                    <Link href={'/agendamento/selecionar-horarios'} className="btn btn-active btn-neutral text-white">Próximo</Link>
                 </div>
             </footer>
         </div>
