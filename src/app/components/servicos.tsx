@@ -1,3 +1,4 @@
+'use client'
 export default function Servicos({ setCheckCount }: any) {
   function handleCount(): void {
     const checkboxes = document.querySelectorAll<HTMLInputElement>(
@@ -16,7 +17,7 @@ export default function Servicos({ setCheckCount }: any) {
               <input
                 type="checkbox"
                 className="checkbox border-0 text-sm"
-                onClick={handleCount}
+                onClick={() => handleCount()}
               />{' '}
               Corte Degradê
             </p>
