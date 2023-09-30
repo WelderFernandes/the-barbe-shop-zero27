@@ -4,7 +4,7 @@ import { BiMap } from 'react-icons/bi'
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 import { IoNotificationsSharp } from 'react-icons/io5'
 import Rodape from './components/rodape'
-import Servicos from './components/servicos'
+import ServicosHome from './components/servicos_home'
 
 export default function Home() {
   return (
@@ -47,11 +47,11 @@ export default function Home() {
             <h1 className="mb-5 mt-10 text-lg font-bold text-black">
               TOP 5 SERVIÇOS
             </h1>
-            <Servicos />
-            <Servicos />
-            <Servicos />
-            <Servicos />
-            <Servicos />
+            <ServicosHome />
+            <ServicosHome />
+            <ServicosHome />
+            <ServicosHome />
+            <ServicosHome />
           </div>
           <div>
             <h1 className="mt-10 text-lg font-bold text-black">
