@@ -28,7 +28,6 @@ export default function Agendamento() {
               <li className="step step-primary"></li>
               <li className="step"></li>
               <li className="step"></li>
-              <li className="step"></li>
             </ul>
           </div>
 
