@@ -5,8 +5,7 @@ import { AiOutlineArrowLeft, AiOutlineClockCircle } from 'react-icons/ai'
 import { BsTrash } from 'react-icons/bs'
 
 import ServicosHome from '@/app/components/servicos_home'
-import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import 'react-calendar/dist/Calendar.css'
 
 export default function SelecionarHorarios() {
@@ -16,6 +15,31 @@ export default function SelecionarHorarios() {
   const onChange = (selectedDate: any) => {
     setDate(selectedDate)
   }
+
+  const [selectedOptions, setSelectedOptions] = useState<{
+    [group: string]: string
+  }>({
+    group1: '',
+    group2: '',
+  })
+
+  const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target
+    setSelectedOptions((prevSelectedOptions) => ({
+      ...prevSelectedOptions,
+      [name]: value,
+    }))
+  }
+
+  const [allSelected, setAllSelected] = useState(false)
+
+  useEffect(() => {
+    const groups = Object.keys(selectedOptions)
+    const isAllSelected = groups.every((group) => selectedOptions[group] !== '')
+    setAllSelected(isAllSelected)
+    console.log(allSelected)
+  }, [selectedOptions])
+
   return (
     <>
       <section className="mx-5">
@@ -36,7 +60,6 @@ export default function SelecionarHorarios() {
               <li className="step step-primary"></li>
               <li className="step step-primary"></li>
               <li className="step"></li>
-              <li className="step"></li>
             </ul>
           </div>
 
@@ -53,57 +76,94 @@ export default function SelecionarHorarios() {
               <div className="divider"></div>
 
               <div className="flex flex-row items-start gap-3">
-                <div className="flex w-[30%] flex-col items-center gap-2">
-                  <div className="avatar">
-                    <div className="w-16 rounded-full">
-                      <Image
-                        src={'/img/logo/logo.png'}
-                        alt="Logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                  <h1 className="font-semibold">Tam Cortes</h1>
-                </div>
-                <div className="-mt-4 w-[70%]">
+                <div className="mt-0 w-full">
                   <div>
-                    <ServicosHome />
-                    <div className="ml-4 mt-2 flex flex-row items-center justify-between gap-0 text-sm font-semibold text-gray-600">
+                    <div className="flex flex-row items-center justify-between gap-2">
+                      <div className="w-full">
+                        <ServicosHome />
+                      </div>
+                      <span className="mr-4 text-base text-error">
+                        <BsTrash />
+                      </span>
+                    </div>
+                    <div className="ml-4 mt-2 flex flex-row items-center justify-between gap-9 text-sm font-semibold text-gray-600">
                       <div className="flex flex-row items-center gap-0">
                         <span>
                           <AiOutlineClockCircle />
                         </span>
                         <p>10m</p>
                       </div>
-                      <span className="mr-4 text-error">
-                        <BsTrash />
-                      </span>
+                      <p className="w-full text-left text-xs">
+                        SELECIONE UM HORÁRIO ABAIXO:
+                      </p>
                     </div>
                     <div className="mt-3 flex justify-center gap-2">
-                      <div className="badge badge-ghost">16:00</div>
-                      <div className="badge badge-ghost">16:10</div>
-                      <div className="badge badge-ghost">16:20</div>
+                      <input
+                        type="radio"
+                        name="group1"
+                        aria-label="16:00"
+                        className="btn btn-xs"
+                        onChange={handleOptionChange}
+                      />
+                      <input
+                        type="radio"
+                        name="group1"
+                        aria-label="16:10"
+                        className="btn btn-xs"
+                        onChange={handleOptionChange}
+                      />
+                      <input
+                        type="radio"
+                        name="group1"
+                        aria-label="16:20"
+                        className="btn btn-xs"
+                        onChange={handleOptionChange}
+                      />
                     </div>
                   </div>
 
                   <div className="mt-6">
-                    <ServicosHome />
-                    <div className="ml-4 mt-2 flex flex-row items-center justify-between gap-0 text-sm font-semibold text-gray-600">
+                    <div className="flex flex-row items-center justify-center gap-2">
+                      <div className="w-full">
+                        <ServicosHome />
+                      </div>
+                      <span className="mr-4 text-base text-error">
+                        <BsTrash />
+                      </span>
+                    </div>
+                    <div className="ml-4 mt-2 flex flex-row items-center justify-between gap-9 text-sm font-semibold text-gray-600">
                       <div className="flex flex-row items-center gap-0">
                         <span>
                           <AiOutlineClockCircle />
                         </span>
                         <p>10m</p>
                       </div>
-                      <span className="mr-4 text-error">
-                        <BsTrash />
-                      </span>
+                      <p className="w-full text-left text-xs">
+                        SELECIONE UM HORÁRIO ABAIXO:
+                      </p>
                     </div>
                     <div className="mt-3 flex justify-center gap-2">
-                      <div className="badge badge-ghost">16:00</div>
-                      <div className="badge badge-ghost">16:10</div>
-                      <div className="badge badge-ghost">16:20</div>
+                      <input
+                        type="radio"
+                        name="group2"
+                        aria-label="16:00"
+                        className="btn btn-xs"
+                        onChange={handleOptionChange}
+                      />
+                      <input
+                        type="radio"
+                        name="group2"
+                        aria-label="16:10"
+                        className="btn btn-xs"
+                        onChange={handleOptionChange}
+                      />
+                      <input
+                        type="radio"
+                        name="group2"
+                        aria-label="16:20"
+                        className="btn btn-xs"
+                        onChange={handleOptionChange}
+                      />
                     </div>
                   </div>
                 </div>
@@ -118,11 +178,11 @@ export default function SelecionarHorarios() {
       <footer>
         <div className="tabs-boxed tabs fixed bottom-0 flex h-[80px] w-full max-w-[425px] items-center justify-end rounded-t-2xl bg-white p-5 shadow-md">
           <Link
-            href={'/agendamento/selecionar-horarios'}
+            href={'/agendamento/checkout'}
             className={
-              date == null
-                ? 'btn btn-disabled btn-neutral btn-active text-white'
-                : 'btn btn-neutral btn-active text-white'
+              allSelected
+                ? 'btn btn-neutral btn-active text-white'
+                : 'btn btn-disabled btn-neutral btn-active text-white'
             }
           >
             Próximo

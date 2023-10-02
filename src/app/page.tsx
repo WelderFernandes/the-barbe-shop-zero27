@@ -26,7 +26,7 @@ export default function Home() {
       <main className="mx-5 mt-36">
         <Link
           href="/agendamento"
-          className="btn btn-active w-full bg-[#202020] text-white shadow-xl"
+          className="btn btn-neutral w-full text-white shadow-xl"
         >
           AGENDAR CORTE
         </Link>
@@ -47,21 +47,31 @@ export default function Home() {
             <h1 className="mb-5 mt-10 text-lg font-bold text-black">
               TOP 5 SERVIÇOS
             </h1>
-            <ServicosHome />
-            <ServicosHome />
-            <ServicosHome />
-            <ServicosHome />
-            <ServicosHome />
+            <div className="mt-4">
+              <ServicosHome />
+            </div>
+            <div className="mt-4">
+              <ServicosHome />
+            </div>
+            <div className="mt-4">
+              <ServicosHome />
+            </div>
+            <div className="mt-4">
+              <ServicosHome />
+            </div>
+            <div className="mt-4">
+              <ServicosHome />
+            </div>
           </div>
           <div>
             <h1 className="mt-10 text-lg font-bold text-black">
               REDES SOCIAIS
             </h1>
             <p className="mt-4 flex gap-4 text-2xl text-black">
-              <a href="https://www.instagram.com.br/">
+              <a href="https://www.instagram.com/tamcortes13/">
                 <BsInstagram />
               </a>
-              <a href="https://www.instagram.com.br/">
+              <a href="https://www.facebook.com/profile.php?id=100009192556994">
                 <BsFacebook />
               </a>
               <a href="https://www.instagram.com.br/">
