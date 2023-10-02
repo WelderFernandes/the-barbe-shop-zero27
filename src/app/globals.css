@@ -42,17 +42,24 @@ abbr {
 .react-calendar__tile--active {
   background: #111827 !important;
   color: white !important;
-  border-radius: 50%;
+  border-radius: 25%;
   padding: 0px 0px !important;
 }
 
  .react-calendar__tile--active abbr {
   background: #111827 !important;
   color: white !important;
-  border-radius: 50%;
+  border-radius: 30%;
+  padding: 0px !important;
 }
 
 .react-calendar__navigation__label__labelText {
   color: #111827 !important;
   font-weight: 600;
 }
+
+.react-calendar__month-view__days__day:disabled {
+  text-decoration: line-through !important;
+  color: red;
+}
+
