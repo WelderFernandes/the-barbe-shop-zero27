@@ -38,6 +38,12 @@ export function LeftMenu() {
                 <span>Serviçõs</span>
               </Link>
             </li>
+            <li>
+              <Link href="/painel/category">
+                <RxDashboard className="h-5 w-5" />
+                <span>Categorias</span>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
